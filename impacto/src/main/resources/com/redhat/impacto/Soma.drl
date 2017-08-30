@@ -6,7 +6,7 @@ rule "Apply 10% discount to orders over US$ 100,00"
         $c : Calculo()
         $r : Recebimento()
     then
-        $c.set_totalReceb( $c.get_totalReceb() + r.getRecebimento());
+        $c.set_totalReceb( $c.get_totalReceb() + $r.getRecebimento());
         System.out.println("TOTAL: " + $c.get_totalReceb());
         update($c);
         retract($r);

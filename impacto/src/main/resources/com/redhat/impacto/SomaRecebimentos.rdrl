@@ -3,7 +3,7 @@ package com.redhat.impacto;
 import java.lang.Number;
 
 rule "SomaRecebimentos"
-	dialect "java"
+	dialect "mvel"
 	when
 		$c1 : Calculo( )
 		$total : Number( ) from accumulate ( 		(Recebimento( $r : recebimento) from $c1.recebimentos)

@@ -9,10 +9,6 @@ public class Calculo implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
-   private double _totalReceb;
-
-   private java.util.List<com.redhat.impacto.Recebimento> recebimentos;
-
    private double scoreOrigem;
 
    private double scoreDestino;
@@ -24,6 +20,10 @@ public class Calculo implements java.io.Serializable
    private java.lang.String setorOrigem;
 
    private double pagamento;
+
+   private java.util.List<com.redhat.impacto.Recebimento> recebimentos;
+
+   private double _totalReceb;
 
    public Calculo()
    {

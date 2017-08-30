@@ -2,7 +2,8 @@ package com.redhat.impacto;
 
 rule "Calculo do Total Receb."
 ruleflow-group "totalReceb"
-no-loop 
+no-loop true
+lock-on-active true
     
     when
         $c : Calculo()

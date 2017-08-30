@@ -13,6 +13,18 @@ public class Calculo implements java.io.Serializable
 
    private java.util.List<com.redhat.impacto.Recebimento> recebimentos;
 
+   private double scoreOrigem;
+
+   private double scoreDestino;
+
+   private java.lang.String segmentoDestino;
+
+   private java.lang.String ratingDestino;
+
+   private java.lang.String setorOrigem;
+
+   private double pagamento;
+
    public Calculo()
    {
    }
@@ -38,11 +50,80 @@ public class Calculo implements java.io.Serializable
       this._totalReceb = _totalReceb;
    }
 
+   public double getScoreOrigem()
+   {
+      return this.scoreOrigem;
+   }
+
+   public void setScoreOrigem(double scoreOrigem)
+   {
+      this.scoreOrigem = scoreOrigem;
+   }
+
+   public double getScoreDestino()
+   {
+      return this.scoreDestino;
+   }
+
+   public void setScoreDestino(double scoreDestino)
+   {
+      this.scoreDestino = scoreDestino;
+   }
+
+   public java.lang.String getSegmentoDestino()
+   {
+      return this.segmentoDestino;
+   }
+
+   public void setSegmentoDestino(java.lang.String segmentoDestino)
+   {
+      this.segmentoDestino = segmentoDestino;
+   }
+
+   public java.lang.String getRatingDestino()
+   {
+      return this.ratingDestino;
+   }
+
+   public void setRatingDestino(java.lang.String ratingDestino)
+   {
+      this.ratingDestino = ratingDestino;
+   }
+
+   public java.lang.String getSetorOrigem()
+   {
+      return this.setorOrigem;
+   }
+
+   public void setSetorOrigem(java.lang.String setorOrigem)
+   {
+      this.setorOrigem = setorOrigem;
+   }
+
+   public double getPagamento()
+   {
+      return this.pagamento;
+   }
+
+   public void setPagamento(double pagamento)
+   {
+      this.pagamento = pagamento;
+   }
+
    public Calculo(double _totalReceb,
-         java.util.List<com.redhat.impacto.Recebimento> recebimentos)
+         java.util.List<com.redhat.impacto.Recebimento> recebimentos,
+         double scoreOrigem, double scoreDestino,
+         java.lang.String segmentoDestino, java.lang.String ratingDestino,
+         java.lang.String setorOrigem, double pagamento)
    {
       this._totalReceb = _totalReceb;
       this.recebimentos = recebimentos;
+      this.scoreOrigem = scoreOrigem;
+      this.scoreDestino = scoreDestino;
+      this.segmentoDestino = segmentoDestino;
+      this.ratingDestino = ratingDestino;
+      this.setorOrigem = setorOrigem;
+      this.pagamento = pagamento;
    }
 
 }

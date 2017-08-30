@@ -102,23 +102,7 @@ public class Calculo implements java.io.Serializable
       this.pagamento = pagamento;
    }
 
-   public Calculo(double _totalReceb,
-         java.util.List<com.redhat.impacto.Recebimento> recebimentos,
-         double scoreOrigem, double scoreDestino,
-         java.lang.String segmentoDestino, java.lang.String ratingDestino,
-         java.lang.String setorOrigem, double pagamento)
-   {
-      this._totalReceb = _totalReceb;
-      this.recebimentos = recebimentos;
-      this.scoreOrigem = scoreOrigem;
-      this.scoreDestino = scoreDestino;
-      this.segmentoDestino = segmentoDestino;
-      this.ratingDestino = ratingDestino;
-      this.setorOrigem = setorOrigem;
-      this.pagamento = pagamento;
-   }
-
-   public double get_pesoRelac()
+    public double get_pesoRelac()
    {
       return this._pesoRelac;
    }
@@ -168,16 +152,7 @@ public class Calculo implements java.io.Serializable
       this._scoreFinal = _scoreFinal;
    }
 
-   public String toString()
-   {
-      return "Calculo [scoreOrigem=" + scoreOrigem + ", scoreDestino=" + scoreDestino + ", segmentoDestino="
-            + segmentoDestino + ", ratingDestino=" + ratingDestino + ", setorOrigem=" + setorOrigem + ", pagamento="
-            + pagamento + ", recebimentos=" + recebimentos + ", _totalReceb=" + _totalReceb + ", _pesoRelac="
-            + _pesoRelac + ", _impacto=" + _impacto + ", _tabela=" + _tabela + ", _fatorAbsorcao=" + _fatorAbsorcao + ", _fatorImpacto="
-            + _fatorImpacto + ", _scoreFinal=" + _scoreFinal + "]";
-   }
-
-   public com.redhat.impacto.Tabela get_tabela()
+    public com.redhat.impacto.Tabela get_tabela()
    {
       return this._tabela;
    }

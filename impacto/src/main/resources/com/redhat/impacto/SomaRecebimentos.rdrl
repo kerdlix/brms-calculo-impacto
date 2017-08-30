@@ -5,6 +5,9 @@ import java.lang.Number;
 rule "SomaRecebimentos"
 	dialect "mvel"
 	when
-		$c : Calculo( )
+		$c1 : Calculo( )
+		$total : Number( ) from accumulate ( 		(Recebimento( $r : recebimento) from $c1.recebimentos)
+,
+			sum($r)) 
 	then
 end

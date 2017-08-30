@@ -13,9 +13,9 @@ public class Calculo implements java.io.Serializable
 
    private double scoreDestino;
 
-   private java.lang.String segmentoDestino;
+   private Segmento segmentoDestino;
 
-   private java.lang.String ratingDestino;
+   private Rating ratingDestino;
 
    private java.lang.String setorOrigem;
 
@@ -80,26 +80,6 @@ public class Calculo implements java.io.Serializable
    public void setScoreDestino(double scoreDestino)
    {
       this.scoreDestino = scoreDestino;
-   }
-
-   public java.lang.String getSegmentoDestino()
-   {
-      return this.segmentoDestino;
-   }
-
-   public void setSegmentoDestino(java.lang.String segmentoDestino)
-   {
-      this.segmentoDestino = segmentoDestino;
-   }
-
-   public java.lang.String getRatingDestino()
-   {
-      return this.ratingDestino;
-   }
-
-   public void setRatingDestino(java.lang.String ratingDestino)
-   {
-      this.ratingDestino = ratingDestino;
    }
 
    public java.lang.String getSetorOrigem()
@@ -207,9 +187,30 @@ public class Calculo implements java.io.Serializable
       this._tabela = _tabela;
    }
 
+   public com.redhat.impacto.Segmento getSegmentoDestino()
+   {
+      return this.segmentoDestino;
+   }
+
+   public void setSegmentoDestino(com.redhat.impacto.Segmento segmentoDestino)
+   {
+      this.segmentoDestino = segmentoDestino;
+   }
+
+   public com.redhat.impacto.Rating getRatingDestino()
+   {
+      return this.ratingDestino;
+   }
+
+   public void setRatingDestino(com.redhat.impacto.Rating ratingDestino)
+   {
+      this.ratingDestino = ratingDestino;
+   }
+
    public Calculo(double scoreOrigem, double scoreDestino,
-         java.lang.String segmentoDestino, java.lang.String ratingDestino,
-         java.lang.String setorOrigem, double pagamento,
+         com.redhat.impacto.Segmento segmentoDestino,
+         com.redhat.impacto.Rating ratingDestino, java.lang.String setorOrigem,
+         double pagamento,
          java.util.List<com.redhat.impacto.Recebimento> recebimentos,
          double _totalReceb, double _pesoRelac, double _impacto,
          double _fatorAbsorcao, double _fatorImpacto, double _scoreFinal,

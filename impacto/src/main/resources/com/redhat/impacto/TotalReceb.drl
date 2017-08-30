@@ -1,12 +1,13 @@
 package com.redhat.impacto;
 
-rule "regra3"
+rule "Calculo do Total Receb."
 no-loop 
     
     when
-        $c1 : Calculo()
-        $total : Number() from accumulate (Recebimento($r : recebimento) from $c1.recebimentos, sum($r)) 
+        $c : Calculo()
+        $total : Double() from accumulate (Recebimento($r : recebimento) from $c.recebimentos, sum($r)) 
     then
-        System.out.println("TOTAL regra3: " + $total);
+        $c.set_totalReceb($total); 
+        System.out.println("TOTAL RECEB: " + $total);
     end    
     

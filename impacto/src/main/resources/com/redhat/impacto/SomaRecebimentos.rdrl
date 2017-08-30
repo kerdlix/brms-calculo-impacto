@@ -5,5 +5,12 @@ import java.lang.Number;
 rule "SomaRecebimentos"
 	dialect "mvel"
 	when
+		$c : Calculo( )
+		$total : Number( ) from accumulate ( 		(Recebimento( $r : recebimento) from $c.recebimentos)
+,
+			sum($r)) 
 	then
+		modify( $c ) {
+				set_totalReceb( $total )
+		}
 end

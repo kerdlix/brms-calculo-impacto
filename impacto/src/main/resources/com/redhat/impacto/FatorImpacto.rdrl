@@ -1,0 +1,9 @@
+package com.redhat.impacto;
+
+import java.lang.Number;
+
+rule "FatorImpacto"
+	dialect "mvel"
+	when
+	then
+end

@@ -4,7 +4,10 @@ rule "Apply 10% discount to orders over US$ 100,00"
 
     when
         $c : Calculo()
-        $total : Number() from accumulate ( Recebimento($r : recebimento), sum($r) )
+        $r : Recebimento()
     then
-        System.out.println("TOTAL: " + $total);
+        $c.set_totalReceb( $c.get_totalReceb() + r.getRecebimento());
+        System.out.println("TOTAL: " + $c.get_totalReceb());
+        update($c);
+        retract($r);
     end

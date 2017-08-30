@@ -8,7 +8,8 @@ rule "PesoRelac"
 	when
 		$c : Calculo( _totalReceb > 0.0 )
 	then
-		$c.set_pesoRelac( $c.getPagamento() / $c.get_totalReceb() );
-		$c.set_impacto( ($c.getScoreOrigem() * $c.getPagamento() ) / $c.get_totalReceb() );
-		System.out.println("CALCULO IMPACTO: " + $c.get_impacto());
+		modify( $c ) {
+				set_pesoRelac( $c.getPagamento() / $c.get_totalReceb() )
+		}
+		System.out.println("CALCULO PESO RELAC: " + $c.get_pesoRelac());
 end

@@ -193,7 +193,7 @@ public class Calculo implements java.io.Serializable
       return "Calculo [scoreOrigem=" + scoreOrigem + ", scoreDestino=" + scoreDestino + ", segmentoDestino="
             + segmentoDestino + ", ratingDestino=" + ratingDestino + ", setorOrigem=" + setorOrigem + ", pagamento="
             + pagamento + ", recebimentos=" + recebimentos + ", _totalReceb=" + _totalReceb + ", _pesoRelac="
-            + _pesoRelac + ", _impacto=" + _impacto + ", _tabela=" + tabela + ", _fatorAbsorcao=" + _fatorAbsorcao + ", _fatorImpacto="
+            + _pesoRelac + ", _impacto=" + _impacto + ", _tabela=" + _tabela + ", _fatorAbsorcao=" + _fatorAbsorcao + ", _fatorImpacto="
             + _fatorImpacto + ", _scoreFinal=" + _scoreFinal + "]";
    }
 

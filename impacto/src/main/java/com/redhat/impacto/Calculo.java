@@ -16,6 +16,8 @@ public class Calculo implements java.io.Serializable
    private java.lang.String setorOrigem;
    private java.lang.Integer pagamento;
 
+   private java.util.List<com.redhat.impacto.Recebimento> recebimentos;
+
    public Calculo()
    {
    }
@@ -80,10 +82,21 @@ public class Calculo implements java.io.Serializable
       this.pagamento = pagamento;
    }
 
-   public Calculo(java.lang.Integer scoreOrigem,
-         java.lang.Integer scoreDestino, java.lang.String segmentoDestino,
-         java.lang.String ratingDestino, java.lang.String setorOrigem,
-         java.lang.Integer pagamento)
+   public java.util.List<com.redhat.impacto.Recebimento> getRecebimentos()
+   {
+      return this.recebimentos;
+   }
+
+   public void setRecebimentos(
+         java.util.List<com.redhat.impacto.Recebimento> recebimentos)
+   {
+      this.recebimentos = recebimentos;
+   }
+
+   public Calculo(java.lang.Integer scoreOrigem, java.lang.Integer scoreDestino,
+         java.lang.String segmentoDestino, java.lang.String ratingDestino,
+         java.lang.String setorOrigem, java.lang.Integer pagamento,
+         java.util.List<com.redhat.impacto.Recebimento> recebimentos)
    {
       this.scoreOrigem = scoreOrigem;
       this.scoreDestino = scoreDestino;
@@ -91,6 +104,7 @@ public class Calculo implements java.io.Serializable
       this.ratingDestino = ratingDestino;
       this.setorOrigem = setorOrigem;
       this.pagamento = pagamento;
+      this.recebimentos = recebimentos;
    }
 
 }

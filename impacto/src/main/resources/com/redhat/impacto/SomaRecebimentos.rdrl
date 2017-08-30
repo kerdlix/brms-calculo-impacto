@@ -6,8 +6,5 @@ rule "SomaRecebimentos"
 	dialect "mvel"
 	when
 		$c : Calculo( )
-		$total : Number( ) from accumulate ( 		(Recebimento( $r : recebimento) from $c.recebimentos)
-,
-			sum($r)) 
 	then
 end

@@ -10,7 +10,7 @@ public class Recebimento implements java.io.Serializable
    static final long serialVersionUID = 1L;
 
    private java.lang.String origem;
-   private java.lang.Integer recebimento;
+   private Double recebimento;
 
    public Recebimento()
    {
@@ -26,17 +26,17 @@ public class Recebimento implements java.io.Serializable
       this.origem = origem;
    }
 
-   public java.lang.Integer getRecebimento()
+   public java.lang.Double getRecebimento()
    {
       return this.recebimento;
    }
 
-   public void setRecebimento(java.lang.Integer recebimento)
+   public void setRecebimento(java.lang.Double recebimento)
    {
       this.recebimento = recebimento;
    }
 
-   public Recebimento(java.lang.String origem, java.lang.Integer recebimento)
+   public Recebimento(java.lang.String origem, java.lang.Double recebimento)
    {
       this.origem = origem;
       this.recebimento = recebimento;

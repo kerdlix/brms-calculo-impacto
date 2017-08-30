@@ -207,5 +207,14 @@ public class Calculo implements java.io.Serializable
       this._fatorImpacto = _fatorImpacto;
       this._scoreFinal = _scoreFinal;
    }
+   
+    public String toString() {
+    	return "Calculo [scoreOrigem=" + scoreOrigem + ", scoreDestino=" + scoreDestino + ", segmentoDestino="
+    			+ segmentoDestino + ", ratingDestino=" + ratingDestino + ", setorOrigem=" + setorOrigem + ", pagamento="
+    			+ pagamento + ", recebimentos=" + recebimentos + ", _totalReceb=" + _totalReceb + ", _pesoRelac="
+    			+ _pesoRelac + ", _impacto=" + _impacto + ", _fatorAbsorcao=" + _fatorAbsorcao + ", _fatorImpacto="
+    			+ _fatorImpacto + ", _scoreFinal=" + _scoreFinal + "]";
+    }
+       
 
 }

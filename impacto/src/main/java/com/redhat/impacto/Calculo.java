@@ -11,6 +11,8 @@ public class Calculo implements java.io.Serializable
 
    private java.lang.Double _totalReceb;
 
+   private java.util.List<com.redhat.impacto.Recebimento> recebimentos;
+
    public Calculo()
    {
    }
@@ -25,9 +27,22 @@ public class Calculo implements java.io.Serializable
       this._totalReceb = _totalReceb;
    }
 
-   public Calculo(java.lang.Double _totalReceb)
+   public java.util.List<com.redhat.impacto.Recebimento> getRecebimentos()
+   {
+      return this.recebimentos;
+   }
+
+   public void setRecebimentos(
+         java.util.List<com.redhat.impacto.Recebimento> recebimentos)
+   {
+      this.recebimentos = recebimentos;
+   }
+
+   public Calculo(java.lang.Double _totalReceb,
+         java.util.List<com.redhat.impacto.Recebimento> recebimentos)
    {
       this._totalReceb = _totalReceb;
+      this.recebimentos = recebimentos;
    }
 
 }

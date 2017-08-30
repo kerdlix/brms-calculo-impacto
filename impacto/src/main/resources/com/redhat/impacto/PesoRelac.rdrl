@@ -4,6 +4,7 @@ import java.lang.Number;
 
 rule "PesoRelac"
 	dialect "mvel"
+	ruleflow-group "pesoRelac"
 	when
 		$c : Calculo( _totalReceb > 0.0 )
 	then

@@ -8,6 +8,6 @@ no-loop
         $total : Double() from accumulate (Recebimento($r : recebimento) from $c.recebimentos, sum($r)) 
     then
         $c.set_totalReceb($total); 
-        System.out.println("TOTAL RECEB: " + $total);
+        System.out.println("CALCULO TOTAL RECEB: " + $total);
     end    
     

@@ -42,4 +42,8 @@ public class Recebimento implements java.io.Serializable
       this.recebimento = recebimento;
    }
 
+	public String toString() {
+		return "Recebimento [origem=" + origem + ", recebimento=" + recebimento + "]";
+	}
+
 }

@@ -10,7 +10,4 @@ rule "SomaRecebimentos"
 ,
 			sum($r)) 
 	then
-		modify( $c ) {
-				set_totalReceb( $total )
-		}
 end

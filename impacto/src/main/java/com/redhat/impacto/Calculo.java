@@ -9,22 +9,12 @@ public class Calculo implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
-   private java.lang.Double _totalReceb;
+   private double _totalReceb;
 
    private java.util.List<com.redhat.impacto.Recebimento> recebimentos;
 
    public Calculo()
    {
-   }
-
-   public java.lang.Double get_totalReceb()
-   {
-      return this._totalReceb;
-   }
-
-   public void set_totalReceb(java.lang.Double _totalReceb)
-   {
-      this._totalReceb = _totalReceb;
    }
 
    public java.util.List<com.redhat.impacto.Recebimento> getRecebimentos()
@@ -38,7 +28,17 @@ public class Calculo implements java.io.Serializable
       this.recebimentos = recebimentos;
    }
 
-   public Calculo(java.lang.Double _totalReceb,
+   public double get_totalReceb()
+   {
+      return this._totalReceb;
+   }
+
+   public void set_totalReceb(double _totalReceb)
+   {
+      this._totalReceb = _totalReceb;
+   }
+
+   public Calculo(double _totalReceb,
          java.util.List<com.redhat.impacto.Recebimento> recebimentos)
    {
       this._totalReceb = _totalReceb;

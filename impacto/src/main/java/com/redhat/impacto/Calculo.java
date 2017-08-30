@@ -37,6 +37,8 @@ public class Calculo implements java.io.Serializable
 
    private com.redhat.impacto.Tabela _tabela;
 
+   private double _scoreParcial;
+
    public Calculo()
    {
    }
@@ -102,7 +104,7 @@ public class Calculo implements java.io.Serializable
       this.pagamento = pagamento;
    }
 
-    public double get_pesoRelac()
+   public double get_pesoRelac()
    {
       return this._pesoRelac;
    }
@@ -152,7 +154,7 @@ public class Calculo implements java.io.Serializable
       this._scoreFinal = _scoreFinal;
    }
 
-    public com.redhat.impacto.Tabela get_tabela()
+   public com.redhat.impacto.Tabela get_tabela()
    {
       return this._tabela;
    }
@@ -182,6 +184,16 @@ public class Calculo implements java.io.Serializable
       this.ratingDestino = ratingDestino;
    }
 
+   public double get_scoreParcial()
+   {
+      return this._scoreParcial;
+   }
+
+   public void set_scoreParcial(double _scoreParcial)
+   {
+      this._scoreParcial = _scoreParcial;
+   }
+
    public Calculo(double scoreOrigem, double scoreDestino,
          com.redhat.impacto.Segmento segmentoDestino,
          com.redhat.impacto.Rating ratingDestino, java.lang.String setorOrigem,
@@ -189,7 +201,7 @@ public class Calculo implements java.io.Serializable
          java.util.List<com.redhat.impacto.Recebimento> recebimentos,
          double _totalReceb, double _pesoRelac, double _impacto,
          double _fatorAbsorcao, double _fatorImpacto, double _scoreFinal,
-         com.redhat.impacto.Tabela _tabela)
+         com.redhat.impacto.Tabela _tabela, double _scoreParcial)
    {
       this.scoreOrigem = scoreOrigem;
       this.scoreDestino = scoreDestino;
@@ -205,6 +217,7 @@ public class Calculo implements java.io.Serializable
       this._fatorImpacto = _fatorImpacto;
       this._scoreFinal = _scoreFinal;
       this._tabela = _tabela;
+      this._scoreParcial = _scoreParcial;
    }
 
 }

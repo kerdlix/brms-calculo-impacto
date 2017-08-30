@@ -11,6 +11,7 @@ rule "ScoreFinal"
 		$c : Calculo( )
 	then
 		modify( $c ) {
-				set_scoreParcial( ($c.getScoreDestino() * $c.get_fatorAbsorcao()) + ($c.get_impacto() * $c.get_fatorImpacto()) )
+				set_scoreParcial( ($c.getScoreDestino() * $c.get_fatorAbsorcao()) + ($c.get_impacto() * $c.get_fatorImpacto()) ), 
+				set_scoreFinal( $c.get_scoreParcial() > $c.getScoreDestino() ? $c.get_scoreParcial() : $c.getScoreDestino() )
 		}
 end

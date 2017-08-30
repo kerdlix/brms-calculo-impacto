@@ -4,6 +4,13 @@ import java.lang.Number;
 
 rule "ScoreFinal"
 	dialect "mvel"
+	no-loop true
+	lock-on-active true
+	ruleflow-group "scoreFinal"
 	when
+		$c : Calculo( )
 	then
+		modify( $c ) {
+				set_scoreFinal(  )
+		}
 end

@@ -5,6 +5,8 @@ import java.lang.Number;
 rule "PesoRelac"
 	dialect "mvel"
 	ruleflow-group "pesoRelac"
+	lock-on-active true
+	no-loop true
 	when
 		$c : Calculo( _totalReceb > 0.0 )
 	then

@@ -6,6 +6,5 @@ rule "Apply 10% discount to orders over US$ 100,00"
         $c : Calculo()
         $total : Number() from accumulate ( Recebimento($r : recebimento), sum($r) )
     then
-        # apply discount to $order
         System.out.println("TOTAL: " + $total);
     end

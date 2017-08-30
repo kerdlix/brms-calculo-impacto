@@ -4,6 +4,13 @@ import java.lang.Number;
 
 rule "FatorImpacto"
 	dialect "mvel"
+	no-loop true
+	lock-on-active true
+	ruleflow-group "fatorImpacto"
 	when
+		$c : Calculo( )
 	then
+		modify( $c ) {
+				set_fatorImpacto( 1 - $c.get_fatorAbsorcao() )
+		}
 end

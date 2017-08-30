@@ -1,6 +1,7 @@
 package com.redhat.impacto;
 
 rule "Calculo do Total Receb."
+ruleflow-group "totalReceb"
 no-loop 
     
     when

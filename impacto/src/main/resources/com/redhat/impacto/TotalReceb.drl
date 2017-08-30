@@ -8,7 +8,9 @@ no-loop
         $c : Calculo()
         $total : Double() from accumulate (Recebimento($r : recebimento) from $c.recebimentos, sum($r)) 
     then
-        $c.set_totalReceb($total); 
+        modify ($c) {
+            set_totalReceb($total); 
+        }
         System.out.println("CALCULO TOTAL RECEB: " + $total);
     end    
     

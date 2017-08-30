@@ -5,9 +5,13 @@ import java.lang.Number;
 rule "Impacto"
 	dialect "mvel"
 	ruleflow-group "impacto"
+	lock-on-active true
+	no-loop true
 	when
 		$c : Calculo( _totalReceb > 0.0 )
 	then
-		$c.set_pesoRelac( $c.getPagamento() / $c.get_totalReceb() );
+		modify( $c ) {
+				set_pesoRelac( $c.getPagamento() / $c.get_totalReceb() )
+		}
 		System.out.println("CALCULO PESO RELAC: " + $c.get_pesoRelac());
 end

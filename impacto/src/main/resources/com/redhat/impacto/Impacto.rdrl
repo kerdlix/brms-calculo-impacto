@@ -11,7 +11,7 @@ rule "Impacto"
 		$c : Calculo( _totalReceb > 0.0 )
 	then
 		modify( $c ) {
-				set_pesoRelac( $c.getPagamento() / $c.get_totalReceb() )
+				set_impacto( ($c.getScoreOrigem() * $c.getPagamento() ) / $c.get_totalReceb() )
 		}
-		System.out.println("CALCULO PESO RELAC: " + $c.get_pesoRelac());
+		System.out.println("CALCULO IMPACTO: " + $c.get_impacto());
 end

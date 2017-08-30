@@ -35,6 +35,8 @@ public class Calculo implements java.io.Serializable
 
    private double _scoreFinal;
 
+   private com.redhat.impacto.Tabela _tabela;
+
    public Calculo()
    {
    }
@@ -186,12 +188,32 @@ public class Calculo implements java.io.Serializable
       this._scoreFinal = _scoreFinal;
    }
 
+   public String toString()
+   {
+      return "Calculo [scoreOrigem=" + scoreOrigem + ", scoreDestino=" + scoreDestino + ", segmentoDestino="
+            + segmentoDestino + ", ratingDestino=" + ratingDestino + ", setorOrigem=" + setorOrigem + ", pagamento="
+            + pagamento + ", recebimentos=" + recebimentos + ", _totalReceb=" + _totalReceb + ", _pesoRelac="
+            + _pesoRelac + ", _impacto=" + _impacto + ", _tabela=" + tabela + ", _fatorAbsorcao=" + _fatorAbsorcao + ", _fatorImpacto="
+            + _fatorImpacto + ", _scoreFinal=" + _scoreFinal + "]";
+   }
+
+   public com.redhat.impacto.Tabela get_tabela()
+   {
+      return this._tabela;
+   }
+
+   public void set_tabela(com.redhat.impacto.Tabela _tabela)
+   {
+      this._tabela = _tabela;
+   }
+
    public Calculo(double scoreOrigem, double scoreDestino,
          java.lang.String segmentoDestino, java.lang.String ratingDestino,
          java.lang.String setorOrigem, double pagamento,
          java.util.List<com.redhat.impacto.Recebimento> recebimentos,
          double _totalReceb, double _pesoRelac, double _impacto,
-         double _fatorAbsorcao, double _fatorImpacto, double _scoreFinal)
+         double _fatorAbsorcao, double _fatorImpacto, double _scoreFinal,
+         com.redhat.impacto.Tabela _tabela)
    {
       this.scoreOrigem = scoreOrigem;
       this.scoreDestino = scoreDestino;
@@ -206,15 +228,7 @@ public class Calculo implements java.io.Serializable
       this._fatorAbsorcao = _fatorAbsorcao;
       this._fatorImpacto = _fatorImpacto;
       this._scoreFinal = _scoreFinal;
+      this._tabela = _tabela;
    }
-   
-    public String toString() {
-    	return "Calculo [scoreOrigem=" + scoreOrigem + ", scoreDestino=" + scoreDestino + ", segmentoDestino="
-    			+ segmentoDestino + ", ratingDestino=" + ratingDestino + ", setorOrigem=" + setorOrigem + ", pagamento="
-    			+ pagamento + ", recebimentos=" + recebimentos + ", _totalReceb=" + _totalReceb + ", _pesoRelac="
-    			+ _pesoRelac + ", _impacto=" + _impacto + ", _fatorAbsorcao=" + _fatorAbsorcao + ", _fatorImpacto="
-    			+ _fatorImpacto + ", _scoreFinal=" + _scoreFinal + "]";
-    }
-       
 
 }

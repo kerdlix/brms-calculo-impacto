@@ -84,3 +84,55 @@ http://localhost:8080/kie-server/services/rest/server/containers/instances/impac
 </batch-execution>
 ```
 
+## Construção
+
+### Organizational Units
+<p align="center"><img src="/images/00.png?raw=true"></p>
+
+### Project
+<p align="center"><img src="/images/01.png?raw=true"></p>
+<p align="center"><img src="/images/02.png?raw=true"></p>
+
+### Data Object
+<p align="center"><img src="/images/03.png?raw=true"></p>
+<p align="center"><img src="/images/04.png?raw=true"></p>
+<p align="center"><img src="/images/05.png?raw=true"></p>
+<p align="center"><img src="/images/06.png?raw=true"></p>
+<p align="center"><img src="/images/07.png?raw=true"></p>
+
+### Ruleflow
+<p align="center"><img src="/images/18.png?raw=true"></p>
+
+### Grupo totalReceb
+<p align="center"><img src="/images/08.png?raw=true"></p>
+
+### Grupo pesoRelac
+<p align="center"><img src="/images/16.png?raw=true"></p>
+
+### Grupo impacto
+<p align="center"><img src="/images/15.png?raw=true"></p>
+
+### Grupo fatorAbsorcao
+<p align="center"><img src="/images/09.png?raw=true"></p>
+
+### Grupo tabelas
+<p align="center"><img src="/images/11.png?raw=true"></p>
+<p align="center"><img src="/images/12.png?raw=true"></p>
+<p align="center"><img src="/images/13.png?raw=true"></p>
+
+### Grupo origensNeutras
+<p align="center"><img src="/images/10.png?raw=true"></p>
+
+### Grupo fatorImpacto
+<p align="center"><img src="/images/14.png?raw=true"></p>
+
+### Grupo scoreFinal
+<p align="center"><img src="/images/17.png?raw=true"></p>
+
+### Decision Server
+<p align="center"><img src="/images/19.png?raw=true"></p>
+
+### Cenários de testes
+<p align="center"><img src="/images/20.png?raw=true"></p>
+<p align="center"><img src="/images/21.png?raw=true"></p>
+
